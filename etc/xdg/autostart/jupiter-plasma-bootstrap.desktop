@@ -1,17 +1,14 @@
 [Desktop Entry]
-Comment[en_US]=Because the EDID keeps changing
-Comment=Because the EDID keeps changing
 Exec=/usr/bin/jupiter-plasma-bootstrap
-GenericName[en_US]=Forces the eDP-1 output to EV2 orientation
-GenericName=Forces the eDP-1 output to EV2 orientation
+GenericName[en_US]=Desktop Bootstrap
+GenericName=Desktop Bootstrap
 Icon=system-run
 MimeType=
-Name[en_US]=EV2 Screen Rotation Hack
-Name=EV2 Screen Rotation Hack
+Name[en_US]=Desktop Bootstrap
+Name=Desktop Bootstrap
 Path=
 StartupNotify=true
 Terminal=false
-TerminalOptions=
 Type=Application
 X-DBUS-ServiceName=
 X-DBUS-StartupType=
