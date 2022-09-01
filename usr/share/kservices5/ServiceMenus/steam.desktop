@@ -6,6 +6,6 @@ MimeType=application/x-desktop;application/x-executable;application/vnd.appimage
 Actions=addToSteam
 
 [Desktop Action addToSteam]
-Exec=steamos-add-to-steam %u
+Exec=steamos-add-to-steam -ui %u
 Icon=steam
 Name=Add to Steam
