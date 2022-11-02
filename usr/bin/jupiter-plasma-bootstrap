@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -xeuo pipefail
+set -eo pipefail
 
-if [[ -n "${WAYLAND_DISPLAY}" ]]; then
+if [[ "${XDG_SESSION_TYPE}" = "wayland" ]]; then
   # Try to wait for kscreen to be ready.  This was mostly a hack to try to make the below bug not happen, but I'm afraid
   # to remove it because this weird bug has caused hours of grief.
   i=0
