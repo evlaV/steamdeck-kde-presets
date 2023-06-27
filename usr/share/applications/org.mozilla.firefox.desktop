@@ -2,6 +2,6 @@
 Type=Application
 Name=Install Firefox
 Icon=/usr/share/icons/hicolor/scalable/apps/install-firefox.svg
-Exec=xdg-open appstream://org.mozilla.firefox
+Exec=sh -c 'xdg-open appstream://org.mozilla.firefox' %U
 Categories=Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https
