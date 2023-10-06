@@ -1,9 +1,11 @@
 #! /bin/sh
 
+set -e
+
 add_to_steam() {
     encodedUrl="steam://addnonsteamgame/$(python3 -c "import urllib.parse;print(urllib.parse.quote(\"$1\", safe=''))")"
     touch /tmp/addnonsteamgamefile
-    xdg-open $encodedUrl
+    steam "$encodedUrl"
 }
 
 show_error() {
@@ -14,18 +16,28 @@ show_error() {
     fi
 }
 
+if [ $(id -u) = "0" ]; then
+    show_error "This script cannot be run as root"
+    exit 1
+fi
+
+if [ "$XDG_SESSION_TYPE" = "tty" ] && ! pgrep -x steam >/dev/null 2>&1; then
+   show_error "Cannot run this script from a tty if Steam is not running"
+   exit 1
+fi
+
 if [ "$1" = "-ui" ]; then
     show_dialog=1
     shift
 fi
 
-file=$1
+file=$(realpath "$1")
 if [ ! -e "$file" ]
 then
     echo "Usage: steamos-add-to-steam [-ui] <path>"
     exit 1
 fi
-mime=$(xdg-mime query filetype "$file")
+mime=$(kmimetypefinder "$file")
 case "$mime" in
     "application/x-desktop"|"application/x-ms-dos-executable")
         add_to_steam "$file"
