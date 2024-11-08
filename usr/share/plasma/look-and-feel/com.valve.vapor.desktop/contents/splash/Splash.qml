@@ -4,9 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Window 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.kirigami 2 as Kirigami
 
 Rectangle {
     id: root
@@ -38,7 +37,7 @@ Rectangle {
         Image {
             id: logo
             //match SDDM/lockscreen avatar positioning
-            property real size: PlasmaCore.Units.gridUnit * 24
+            readonly property real size: Kirigami.Units.gridUnit * 24
 
             anchors.centerIn: parent
 
@@ -55,8 +54,8 @@ Rectangle {
             y: parent.height - (parent.height - logo.y) / 3 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
-            sourceSize.height: PlasmaCore.Units.gridUnit * 2
-            sourceSize.width: PlasmaCore.Units.gridUnit * 2
+            sourceSize.height: Kirigami.Units.gridUnit * 2
+            sourceSize.width: Kirigami.Units.gridUnit * 2
             RotationAnimator on rotation {
                 id: rotationAnimator
                 from: 0
@@ -67,7 +66,7 @@ Rectangle {
                 duration: 2000
                 loops: Animation.Infinite
                 // Don't want it to animate at all if the user has disabled animations
-                running: PlasmaCore.Units.longDuration > 1
+                running: Kirigami.Units.longDuration > 1
             }
         }
     }
@@ -78,7 +77,7 @@ Rectangle {
         target: content
         from: 0
         to: 1
-        duration: PlasmaCore.Units.veryLongDuration * 2
+        duration: Kirigami.Units.veryLongDuration * 2
         easing.type: Easing.InOutQuad
     }
 }
