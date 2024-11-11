@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Valve"
+            }
+        ],
+        "Category": "",
+        "Description": "Vapor - SteamOS Theme based on KDE Breeze and Breath",
+        "EnabledByDefault": true,
+        "Id": "com.valve.vapor",
+        "License": "GPL version 3",
+        "Name": "Vapor",
+        "Version": "0.1",
+        "Website": "https://www.kde.org/"
+    },
+    "X-Plasma-API": "6.0"
+}
