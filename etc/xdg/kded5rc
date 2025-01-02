@@ -1,3 +1,5 @@
 [Module-donationmessage]
 autoload=false
 
+[Module-kded_plasma-welcome]
+autoload=false
