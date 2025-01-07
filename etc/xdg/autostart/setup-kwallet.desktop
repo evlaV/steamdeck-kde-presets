@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Setup KWallet
+Type=Application
+Exec=/usr/bin/steamos-setup-kwallet
+OnlyShowIn=KDE

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eu
+
+walletpath=${XDG_DATA_HOME:-$HOME/.local/share}/kwalletd
+defaultwalletlocation=/usr/share/kwalletd
+
+if [[ -f $walletpath/kdewallet.kwl ]]; then
+    exit 0
+fi
+
+mkdir -p $walletpath
+cp $defaultwalletlocation/kdewallet.kwl $walletpath/
+cp $defaultwalletlocation/kdewallet.salt $walletpath/
+kwriteconfig6 --file kwalletrc --group Wallet --key "First Use" false
