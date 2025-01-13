@@ -1,6 +1,34 @@
-#!/bin/sh
+#!/bin/bash
+# This script rotates screens that have the "Panel orientation" drm property set
+# X writes the property to the output which is parsed out of xrandr
 
-set -e
+set -eu
 
-# Rotate the builtin screen every time so it's the right way around.
-xrandr --output "eDP" --rotate "right"
+current_identifier=""
+
+while IFS= read line; do
+    if [[ "$line" != [[:space:]]* ]]; then
+        IFS=" "
+        current_identifier="${line%% *}"
+    fi
+    if [[ "$line" == *panel\ orientation:* ]]; then
+        orientation=${line#*: }
+        rotation=""
+        case $orientation in
+            "Normal ")
+                rotation="normal"
+                ;;
+            "Right Side Up ")
+                rotation="right"
+                ;;
+            "Left Side Up ")
+                rotation="left"
+                ;;
+            "Upside down ")
+                rotation="inverted"
+                ;;
+        esac
+        echo >&2 "Output $current_identifier has panel orientation \"$orientation\" rotating $rotation"
+        xrandr --output $current_identifier --rotate "$rotation"
+    fi
+done <<< "$(xrandr --props)"
