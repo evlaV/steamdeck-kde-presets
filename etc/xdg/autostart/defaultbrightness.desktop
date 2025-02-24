@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Default Brightness
+Comment=Sets a default screen brightness at startup
+OnlyShowIn=KDE
+Type=Application
+Exec=qdbus org.kde.ScreenBrightness /org/kde/ScreenBrightness AdjustBrightnessRatio 0.3 1
