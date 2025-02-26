@@ -1,0 +1,8 @@
+[KDE]
+LookAndFeelPackage=com.valve.vapor.desktop
+
+# This is a konsole specific setting belonging to /etc/xdg/konsolerc
+# However we cannot ship this file anymore since upstream konsole ships now this file
+# https://gitlab.steamos.cloud/jupiter/tasks/-/issues/854
+[Desktop Entry]
+DefaultProfile=Vapor.profile
