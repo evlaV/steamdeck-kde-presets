@@ -1,0 +1,9 @@
+[Unit]
+Description=Set default plasma global theme
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/steamos/steamos-set-plasma-theme
+
+[Install]
+WantedBy=multi-user.target
