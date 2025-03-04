@@ -21,6 +21,3 @@ LayoutName=org.kde.breeze.desktop
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
-
-[KSplash]
-Theme=com.valve.vapor

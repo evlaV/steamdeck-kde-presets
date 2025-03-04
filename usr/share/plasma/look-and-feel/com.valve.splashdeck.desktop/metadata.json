@@ -1,0 +1,22 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Valve"
+            }
+        ],
+        "Category": "",
+        "Description": "Steam Deck Splash Screen",
+        "Id": "com.valve.splashdeck.desktop",
+        "License": "GPLv2+",
+        "Name": "Steam Deck",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "Version": "0.01",
+        "Website": ""
+    },
+    "X-Plasma-MainScript": "defaults"
+}
