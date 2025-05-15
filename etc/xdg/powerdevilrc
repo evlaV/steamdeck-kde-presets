@@ -6,7 +6,8 @@ AutoSuspendAction=0
 PowerButtonAction=1
 
 [Battery][Display]
-DimDisplayIdleTimeoutSec=60
+DimDisplayIdleTimeoutSec=-1
+DimDisplayWhenIdle=false
 LockBeforeTurnOffDisplay=true
 TurnOffDisplayIdleTimeoutSec=60
 
@@ -15,6 +16,8 @@ AutoSuspendIdleTimeoutSec=300
 PowerButtonAction=1
 
 [LowBattery][Display]
+DimDisplayIdleTimeoutSec=-1
+DimDisplayWhenIdle=false
 LockBeforeTurnOffDisplay=true
 TurnOffDisplayIdleTimeoutSec=60
 
