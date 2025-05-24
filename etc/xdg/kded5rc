@@ -3,3 +3,6 @@ autoload=false
 
 [Module-kded_plasma-welcome]
 autoload=false
+
+[Module-kameleon]
+autoload=false
