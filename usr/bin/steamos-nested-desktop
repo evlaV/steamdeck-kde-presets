@@ -5,6 +5,10 @@ set -eu
 # Remove the performance overlay, it meddles with some tasks
 unset LD_PRELOAD
 
+# Undo gamescope's session startup script that sets XDG_DESKTOP_PORTAL_DIR
+# to ensure xdg-desktop-portal doesn't try to start desktop portals
+unset XDG_DESKTOP_PORTAL_DIR
+
 function cleanup()
 {
     # Flush fuse mounts beneath here
