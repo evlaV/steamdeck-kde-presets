@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Return to Gaming Mode
-Exec=steamosctl switch-to-game-mode
+Exec=bash -c "steamosctl switch-to-game-mode || qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout"
 Icon=gaming-return
 Terminal=false
 Type=Application
