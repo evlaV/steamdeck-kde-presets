@@ -9,6 +9,10 @@ fi
 
 # Sync latest changes from upstream
 
-if [ -f "$HOME/Desktop/Return.desktop" ]; then
-    cp /etc/skel/Desktop/Return.desktop "$HOME/Desktop/Return.desktop"
+return="$HOME/Desktop/Return.desktop"
+target="/usr/lib/steamos/Return.desktop"
+if [[ -f "${return}" && $(realpath "${return}") != "${target}" ]]; then
+    # In earlier releases, the Return.desktop file was copied over from /etc/skel
+    # as a plain file to the desktop upon user creation. It is now a symlink.
+    ln -sf "${target}" "${return}"
 fi

@@ -1,7 +1,1 @@
-[Desktop Entry]
-Name=Return to Gaming Mode
-Exec=steamosctl switch-to-game-mode
-Icon=gaming-return
-Terminal=false
-Type=Application
-StartupNotify=false
+/usr/lib/steamos/Return.desktop
