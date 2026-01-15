@@ -4,6 +4,6 @@ Type=Service
 Actions=addToSteam
 
 [Desktop Action addToSteam]
-Exec=steamos-add-to-steam -ui %u
+Exec=holo-add-to-steam -ui %u
 Icon=steam
 Name=Add to Steam
