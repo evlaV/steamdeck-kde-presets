@@ -33,7 +33,7 @@ fi
 
 case "$1" in
     -h|--help|"")
-        echo "Usage: steamos-add-to-steam [-ui] <path>"
+        echo "Usage: holo-add-to-steam [-ui] <path>"
         exit 0
         ;;
 esac
