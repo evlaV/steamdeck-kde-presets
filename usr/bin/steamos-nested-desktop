@@ -33,7 +33,7 @@ ln -s $XDG_RUNTIME_DIR/pipewire* $NEW_XDG_RUNTIME_DIR/.
 mkdir $NEW_XDG_RUNTIME_DIR/bin
 cat <<EOF > $NEW_XDG_RUNTIME_DIR/bin/kwin_wayland_wrapper
 #!/bin/sh
-/usr/bin/kwin_wayland_wrapper --width 1280 --height 800 --no-lockscreen \$@
+/usr/bin/kwin_wayland_wrapper --fullscreen true --no-lockscreen \$@
 EOF
 chmod a+x $NEW_XDG_RUNTIME_DIR/bin/kwin_wayland_wrapper
 export PATH=$NEW_XDG_RUNTIME_DIR/bin:$PATH
