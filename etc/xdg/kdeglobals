@@ -4,7 +4,6 @@ LookAndFeelPackage=com.valve.vapor.desktop
 [KDE Action Restrictions][$i]
 action/switch_user=false
 action/start_new_session=false
-action/lock_screen=false
 
 [KDE Control Module Restrictions][$i]
 kcm_sddm.desktop=false

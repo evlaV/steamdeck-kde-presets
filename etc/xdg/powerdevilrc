@@ -1,5 +1,5 @@
 [AC][Display]
-LockBeforeTurnOffDisplay=true
+LockBeforeTurnOffDisplay=false
 
 [AC][SuspendAndShutdown]
 AutoSuspendAction=0
@@ -8,7 +8,7 @@ PowerButtonAction=1
 [Battery][Display]
 DimDisplayIdleTimeoutSec=-1
 DimDisplayWhenIdle=false
-LockBeforeTurnOffDisplay=true
+LockBeforeTurnOffDisplay=false
 TurnOffDisplayIdleTimeoutSec=60
 
 [Battery][SuspendAndShutdown]
@@ -18,7 +18,7 @@ PowerButtonAction=1
 [LowBattery][Display]
 DimDisplayIdleTimeoutSec=-1
 DimDisplayWhenIdle=false
-LockBeforeTurnOffDisplay=true
+LockBeforeTurnOffDisplay=false
 TurnOffDisplayIdleTimeoutSec=60
 
 [LowBattery][SuspendAndShutdown]
