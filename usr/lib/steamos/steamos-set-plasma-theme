@@ -2,4 +2,5 @@
 board_name=$(cat /sys/class/dmi/id/board_name)
 if [[ "$board_name" == "Jupiter" || "$board_name" == "Galileo" ]] then
     kwriteconfig6 --file /etc/xdg/kdeglobals --group KDE --key LookAndFeelPackage "com.valve.vapor.deck.desktop"
+    kwriteconfig6 --file /etc/xdg/kdeglobals --group KDE --key DefaultDarkLookAndFeel "com.valve.vapor.deck.desktop"
 fi
