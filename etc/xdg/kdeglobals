@@ -8,6 +8,7 @@ action/start_new_session=false
 
 [KDE Control Module Restrictions][$i]
 kcm_sddm.desktop=false
+kcm_plasmalogin=false
 kcm_plymouth.desktop=false
 
 [General]
