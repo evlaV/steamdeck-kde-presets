@@ -4,6 +4,7 @@ This repo contains settings and tweaks to the default settings to Plasma and
 other KDE software where they differ from the upstream defaults as well as the
 default themes and some other desktop related things.
 
+The version number major/minor tracks the SteamOS version, with micro increasing by one with each release.
 
 ## Defaults/Tweaks for the desktop
 
@@ -13,7 +14,7 @@ default themes and some other desktop related things.
 - disable plasma welcome and donation popup `/etc/xdg/kded5rc`
 - disable kameleon (leds) `/etc/xdg/kded5rc`
 - disable switch user and new session actions `/etc/xdg/kdeglobals`
-- disable sddm and plymouth kcm `/etc/xdg/kdeglobals`
+- disable sddm, PLM, and plymouth KCMs `/etc/xdg/kdeglobals`
 - disable automatic locking in `/etc/xdg/kscreenlockerrc`
 - unlimited trash size  `/etc/xdg/ktrashrc`
 - wifi credentials system wide by default `/etc/xdg/plasma-nm`
